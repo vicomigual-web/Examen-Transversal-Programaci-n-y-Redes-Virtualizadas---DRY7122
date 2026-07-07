@@ -1,0 +1,17 @@
+---
+- name: AUTOMATIZACION Y HABILITACION DE SERVICIO SNMP
+  hosts: router
+  gather_facts: false
+
+  tasks:
+    - name: CONFIGURAR SERVICIO SNMP Y DATOS DE CONTACTO
+      ios_config:
+        lines:
+          - snmp-server community COMIGUAL_LAZCANO RO
+          - snmp-server location Servidor_Central
+          - snmp-server contact Grupo_Vicente_Gabriel
+      register: resultado_snmp
+
+    - name: MOSTRAR RESULTADO DE LA TAREA
+      debug:
+        msg: "El servicio SNMP fue configurado exitosamente. Cambios realizados: {{ resultado_snmp.changed }}"

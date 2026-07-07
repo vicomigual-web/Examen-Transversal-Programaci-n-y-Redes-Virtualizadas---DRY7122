@@ -1,0 +1,6 @@
+VALIDACION DE INTERFACES - VICENTE Y GABRIEL
+==================================================
+Interface              IP-Address      OK? Method Status                Protocol
+GigabitEthernet1       192.168.100.98  YES DHCP   up                    up      
+Loopback99             99.99.99.99     YES other  up                    up      
+Loopback100            100.100.100.100 YES manual up                    up      
